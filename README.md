@@ -1,5 +1,5 @@
 # geo411-precipitation
-Geography 411 – Homework 1
+Geography 411 | Homework 1
 
 Overview:
 
