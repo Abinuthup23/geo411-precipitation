@@ -100,5 +100,31 @@ t.test(bfloLate, bfloEarly, var.equal = TRUE)
 #Unequal Variance Assumed, two-sided test
 t.test(SDLate, SDEarly)
 
+#9b
+data_1940_2025 <- precip[precip$Year >= 1940 & precip$Year <= 2025,]
+above_42 <- sum(data_1940_2025$Buffalo > 42)
+total_years <- nrow(data_1940_2025)
+prob_above_42 <- above_42/total_years
+prob_above_42
+
+#9C
+prob_less_4 <- pnorm(4, 9.908605, 4.224307)
+prob_less_4
+prob_4_to_10 <- pnorm(10, 9.908605, 4.224307) - prob_less_4
+prob_4_to_10
+
+#9D
+below_4 <- sum(data_1940_2025$SanDiego < 4)
+between_4_10 <- sum(data_1940_2025$SanDiego >= 4 & data_1940_2025$SanDiego <= 10)
+prob_less_4_sand <- below_4/total_years
+prob_4_10_sand <- between_4_10/total_years
+prob_less_4_sand
+prob_4_10_sand
+
+#10
+prob_2 <- 1-sum(dbinom(0:1,4,prob_above_42))
+prob_2
+
+
 
 #Remember to upload your r.script to GitHub. Steps in the word document. 
